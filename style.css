@@ -20,12 +20,14 @@ body * {
     font-family: 'Inter', sans-serif;
     line-height: 160%;
 }
-header{
+
+header {
     text-align: center;
     margin-top: 32px;
     height: calc(120px+32px);
 }
-header img{
+
+header img {
     width: 180px;
     border-radius: 50%;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
@@ -34,13 +36,13 @@ header img{
     transition: transform .5s;
 }
 
-header img:hover{
+header img:hover {
     transform: scale(1.1);
-    filter: saturate(1.2); 
+    filter: saturate(1.2);
 }
 
 main {
-    max-width: 60%;
+    max-width: 58%;
     width: 90%;
     margin: 32px auto;
 
@@ -82,55 +84,76 @@ section ul {
 section li {
     transition: transform .3s;
 }
+
 section li:hover {
     transform: scale(1.1);
     filter: saturate(1.2);
 }
+
 .game-list img {
     width: 90px;
     border-radius: 8px;
-    
+
 }
+
 .game-list li {
     margin: auto;
 }
 
 .channel-list img {
-    border-radius: 50%; 
+    border-radius: 50%;
     width: 70px;
     border: 2px solid #443e54;
-   
+
 }
-.channel-list li{
+
+.channel-list li {
     margin: auto;
 }
 
-header img{
-    animation: fromTop .5s 1s backwards;
- 
+header img {
+    animation: fromTop .5s 2s backwards;
 }
 
 main section {
-    animation: fromBottom .7s backwards;
+    animation: fromRight .5s 1s backwards;
 }
-@keyframes fromTop{
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+
+
+@keyframes fromTop {
     from {
         transform: translateY(-30px);
         opacity: 0;
     }
-    to{
-        transform: translateY(0);
+
+    to {
+        transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes fromBottom {
+@keyframes fromRight {
     from {
         opacity: 0;
-        transform: translateY(30px)
+        transform: translatex(30px)
     }
+
     to {
         opacity: 1;
         transform: translateY(0)
     }
 }
+
